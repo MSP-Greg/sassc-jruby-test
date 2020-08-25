@@ -4,6 +4,7 @@ jobs:
   test:
     strategy:
       matrix:
+        ruby: [jruby, 2.4, 2.5, 2.6, 2.7]
         platform: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.platform }}
     steps:
@@ -12,6 +13,6 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: jruby
+          ruby-version: ${{ matrix.ruby }}
       - name: Build
         run: bundle install
