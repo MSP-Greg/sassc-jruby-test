@@ -1,0 +1,5 @@
+= Test project for sassc-ruby on JRuby + Windows installation failure
+
+https://github.com/ruby/setup-ruby/issues/81
+
+https://github.com/sass/sassc-ruby/issues/214
